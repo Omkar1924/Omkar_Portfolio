@@ -15,7 +15,9 @@ const Contact = () => {
     setStatus({ loading: true, success: null, message: '' });
 
     try {
-      const response = await fetch('/api/contact', {
+      const API_URL = import.meta.env.VITE_API_URL || '';
+
+      const response = await fetch(`${API_URL}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
@@ -197,11 +199,10 @@ const Contact = () => {
               {/* Status Alert Banner */}
               {status.message && (
                 <div
-                  className={`p-4 rounded-xl text-sm font-semibold flex items-start gap-3 ${
-                    status.success
-                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
-                      : 'bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800'
-                  }`}
+                  className={`p-4 rounded-xl text-sm font-semibold flex items-start gap-3 ${status.success
+                    ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800'
+                    : 'bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-800'
+                    }`}
                 >
                   {status.success ? (
                     <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
