@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+app.use(cors({ origin: 'https://omkar-portfolio-lovat.vercel.app' }));
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
