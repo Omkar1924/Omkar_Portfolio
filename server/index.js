@@ -1,5 +1,5 @@
 const express = require('express');
-app.use(cors({ origin: 'https://omkar-portfolio-lovat.vercel.app' }));
+const cors = require('cors');
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
@@ -12,6 +12,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
+app.use(express.json());
 
 // Health Check Route
 app.get('/api/health', (req, res) => {
@@ -31,7 +32,6 @@ app.post('/api/contact', async (req, res) => {
 
   console.log(`[Contact Request Received] Name: ${name} | Email: ${email}`);
 
-  // Configure Nodemailer Transporter
   const smtpHost = process.env.SMTP_HOST || 'smtp.gmail.com';
   const smtpPort = process.env.SMTP_PORT || 587;
   const smtpUser = process.env.SMTP_USER;
