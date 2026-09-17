@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import { Sun, Moon, Menu, X, Code2 } from 'lucide-react';
+import { Sun, Moon, Menu, X, Code2, Download } from 'lucide-react';
 
 const Navbar = () => {
   const { theme, toggleTheme } = useTheme();
@@ -61,6 +61,18 @@ const Navbar = () => {
             </a>
           ))}
 
+          {/* Resume Download CTA */}
+          <a
+            href="/Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+            download="Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/80 border border-indigo-200 dark:border-indigo-800 text-indigo-600 dark:text-cyan-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/80 text-xs font-semibold transition-colors"
+          >
+            <Download className="w-3.5 h-3.5" />
+            <span>Resume</span>
+          </a>
+
           {/* Theme Switcher Button */}
           <button
             onClick={toggleTheme}
@@ -104,6 +116,17 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
+          <a
+            href="/Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+            download="Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMobileMenuOpen(false)}
+            className="flex items-center gap-2 py-2 text-base font-medium text-indigo-600 dark:text-cyan-400 font-semibold"
+          >
+            <Download className="w-4 h-4" />
+            <span>Download Resume</span>
+          </a>
         </div>
       )}
     </header>

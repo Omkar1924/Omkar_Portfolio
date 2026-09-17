@@ -30,6 +30,15 @@ const Footer = () => {
             <a href="#certifications" className="hover:text-indigo-600 dark:hover:text-cyan-400 transition-colors">Certifications</a>
             <a href="#education" className="hover:text-indigo-600 dark:hover:text-cyan-400 transition-colors">Education</a>
             <a href="#contact" className="hover:text-indigo-600 dark:hover:text-cyan-400 transition-colors">Contact</a>
+            <a
+              href="/Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+              download="Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-600 dark:text-cyan-400 hover:underline transition-colors"
+            >
+              Resume PDF
+            </a>
           </div>
 
           {/* Social Icons */}

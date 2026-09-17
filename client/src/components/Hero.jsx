@@ -67,7 +67,9 @@ const Hero = () => {
         >
           <a
             href="/Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
-            download="Omkar_Suryawanshi_Java_FullStackResume.pdf"
+            download="Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all"
           >
             <Download className="w-5 h-5" />
