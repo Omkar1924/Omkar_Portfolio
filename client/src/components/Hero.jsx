@@ -66,8 +66,8 @@ const Hero = () => {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <a
-            href="/Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
-            download="Omkar_Suryawanshi_Java_FullStack_Resume.pdf"
+            href="/Omkar_Suryawanshi_FullStack_Developer.pdf"
+            download="Omkar_Suryawanshi_FullStack_Developer.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold flex items-center justify-center gap-2 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:-translate-y-0.5 transition-all"
